@@ -1,0 +1,12 @@
+tp = int(input("Enter number of True Positives : "))
+fp = int(input("Enter number of False Positives : "))
+tn = int(input("Enter number of True Negatives : "))
+fn = int(input("Enter number of False Negatives : "))
+Acc=(tp+tn)/(tp+tn+fn+fp)
+Err=1-Acc
+Pr=tp/(tp+fp)
+Rec=tp/(tp+fn)
+print("Accuracy : ",Acc*100)
+print("Error : ",Err*100)
+print("Precision : ",Pr*100)
+print("Recall : ",Rec*100)
