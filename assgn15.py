@@ -1,7 +1,6 @@
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-from django.urls import include
 
 df = pd.read_csv("titanic.csv")
 
