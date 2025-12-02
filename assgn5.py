@@ -8,6 +8,9 @@ df = pd.read_csv("Decision.csv")
 print("=== Dataset Preview ===")
 print(df.head())
 
+if "Id" in df.columns:
+    df = df.drop(columns=["Id"])
+
 # Step 2: Convert categorical data to numeric using LabelEncoder
 le = LabelEncoder()
 encoded_df = df.apply(le.fit_transform)
@@ -29,7 +32,7 @@ test_data = pd.DataFrame({
     "Age": ["<21"],
     "Income": ["Low"],
     "Gender": ["Female"],
-    "Marital Status": ["Married"]
+    "Ms": ["Married"]
 })
 
 # Encode test data using the same label encoders
